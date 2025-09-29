@@ -33,3 +33,8 @@ STARTING HEAD at c0100
 2025-09-29 14:28:28.800 | INFO     | __main__:<module>:44 - Running 1000000 tests took 5.20 seconds
 2025-09-29 14:28:28.800 | INFO     | __main__:<module>:45 - --------------------------------
 2025-09-29 14:28:28.800 | INFO     | __main__:<module>:47 - Doing 120000 batches
+2025-09-29 14:48:44.621 | INFO     | __main__:<module>:54 - Running 120000000000 tests took 1215.82 seconds.
+2025-09-29 14:48:44.635 | INFO     | __main__:<module>:58 - --------------------------------
+2025-09-29 14:48:44.636 | INFO     | __main__:<module>:63 - Doing Once: 
+2025-09-29 14:48:44.814 | INFO     | __main__:<module>:67 - Running 1000000 tests took 0.18 seconds
+2025-09-29 14:48:44.814 | INFO     | __main__:<module>:68 - --------------------------------

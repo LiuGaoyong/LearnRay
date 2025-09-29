@@ -42,3 +42,8 @@ STARTING WORKER 1 at c0374
 2025-09-29 14:31:11.470 | INFO     | __main__:<module>:44 - Running 1000000 tests took 51.10 seconds
 2025-09-29 14:31:11.470 | INFO     | __main__:<module>:45 - --------------------------------
 2025-09-29 14:31:11.470 | INFO     | __main__:<module>:47 - Doing 420000 batches
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 1273044.2 ON c0374 CANCELLED AT 2025-09-29T14:58:29 ***
+slurmstepd: error: *** JOB 1273044 ON c0352 CANCELLED AT 2025-09-29T14:58:29 ***
+slurmstepd: error: *** STEP 1273044.1 ON c0352 CANCELLED AT 2025-09-29T14:58:29 ***

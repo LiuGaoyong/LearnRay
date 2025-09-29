@@ -67,3 +67,8 @@ The last 20 lines of /tmp/ray/session_2025-09-29_14-27-04_509265_172712/logs/das
 2025-09-29 14:28:06.121 | INFO     | __main__:<module>:44 - Running 1000000 tests took 76.23 seconds
 2025-09-29 14:28:06.122 | INFO     | __main__:<module>:45 - --------------------------------
 2025-09-29 14:28:06.122 | INFO     | __main__:<module>:47 - Doing 30000 batches
+2025-09-29 14:50:37.709 | INFO     | __main__:<module>:54 - Running 30000000000 tests took 1351.59 seconds.
+2025-09-29 14:50:37.721 | INFO     | __main__:<module>:58 - --------------------------------
+2025-09-29 14:50:37.721 | INFO     | __main__:<module>:63 - Doing Once: 
+2025-09-29 14:50:37.903 | INFO     | __main__:<module>:67 - Running 1000000 tests took 0.18 seconds
+2025-09-29 14:50:37.903 | INFO     | __main__:<module>:68 - --------------------------------

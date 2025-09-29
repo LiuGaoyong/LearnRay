@@ -62,3 +62,12 @@ STARTING WORKER 3 at c2433
 2025-09-29 14:31:15,403	INFO scripts.py:1123 -- [36m[1m--block[22m[39m
 2025-09-29 14:31:15,403	INFO scripts.py:1124 -- This command will now block forever until terminated by a signal.
 2025-09-29 14:31:15,403	INFO scripts.py:1127 -- Running subprocesses are monitored and a message will be printed if any of them terminate unexpectedly. Subprocesses exit with SIGTERM will be treated as graceful, thus NOT reported.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 1273047.2 ON c2431 CANCELLED AT 2025-09-29T14:58:21 ***
+slurmstepd: error: *** STEP 1273047.4 ON c2433 CANCELLED AT 2025-09-29T14:58:21 ***
+slurmstepd: error: *** STEP 1273047.3 ON c2432 CANCELLED AT 2025-09-29T14:58:21 ***
+slurmstepd: error: *** STEP 1273047.1 ON c0464 CANCELLED AT 2025-09-29T14:58:21 ***
+slurmstepd: error: *** JOB 1273047 ON c0464 CANCELLED AT 2025-09-29T14:58:21 ***
