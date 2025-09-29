@@ -1,12 +1,12 @@
 #!/bin/bash
 # shellcheck disable=SC2206
-#SBATCH --exclusive
-#SBATCH --ntasks-per-node=1
 
+#SBATCH --ntasks-per-node=1
 #SBATCH --nodes=1
-#SBATCH --job-name=test-ray_0929-1311
-#SBATCH --output=test-ray_0929-1311.log
+#SBATCH --job-name=test-ray_0929-1409
+#SBATCH --output=test-ray_0929-1409.log
 #SBATCH --partition=ihicnormal
+#SBATCH --cpus-per-task=16
 
 
 # Load modules or your own conda environment here
@@ -61,4 +61,4 @@ for ((i = 1; i <= worker_num; i++)); do
 done
 
 # ===== Call your code below =====
-python highly_parallel.py
+python highly_parallel.py 20000

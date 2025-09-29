@@ -1,0 +1,74 @@
+IP Head: 11.2.11.3:6379
+STARTING HEAD at c0122
+2025-09-29 13:49:31.541 | INFO     | __main__:<module>:34 - Ray start by 2.6e-06s.
+2025-09-29 13:49:31.546 | INFO     | __main__:<module>:35 - --------------------------------
+2025-09-29 13:50:13,514	ERROR services.py:1357 -- Failed to start the dashboard 
+2025-09-29 13:50:13,514	ERROR services.py:1382 -- Error should be written to 'dashboard.log' or 'dashboard.err'. We are printing the last 20 lines for you. See 'https://docs.ray.io/en/master/ray-observability/user-guides/configure-logging.html#logging-directory-structure' to find where the log file is.
+2025-09-29 13:50:13,515	ERROR services.py:1426 -- 
+The last 20 lines of /tmp/ray/session_2025-09-29_13-49-50_760005_82322/logs/dashboard.log (it contains the error message from the dashboard): 
+2025-09-29 13:50:03,413	INFO utils.py:338 -- Available modules: [<class 'ray.dashboard.modules.usage_stats.usage_stats_head.UsageStatsHead'>]
+2025-09-29 13:50:03,413	INFO head.py:235 -- DashboardHeadModules to load: None.
+2025-09-29 13:50:03,413	INFO head.py:238 -- Loading DashboardHeadModule: <class 'ray.dashboard.modules.usage_stats.usage_stats_head.UsageStatsHead'>.
+2025-09-29 13:50:03,413	INFO head.py:242 -- Loaded 1 dashboard head modules: [<ray.dashboard.modules.usage_stats.usage_stats_head.UsageStatsHead object at 0x2b6bc14e0fe0>].
+2025-09-29 13:50:03,414	INFO utils.py:305 -- Get all modules by type: SubprocessModule
+2025-09-29 13:50:03,488	INFO utils.py:338 -- Available modules: [<class 'ray.dashboard.modules.metrics.metrics_head.MetricsHead'>, <class 'ray.dashboard.modules.data.data_head.DataHead'>, <class 'ray.dashboard.modules.event.event_head.EventHead'>, <class 'ray.dashboard.modules.job.job_head.JobHead'>, <class 'ray.dashboard.modules.node.node_head.NodeHead'>, <class 'ray.dashboard.modules.reporter.reporter_head.ReportHead'>, <class 'ray.dashboard.modules.serve.serve_head.ServeHead'>, <class 'ray.dashboard.modules.state.state_head.StateHead'>, <class 'ray.dashboard.modules.train.train_head.TrainHead'>]
+2025-09-29 13:50:03,488	INFO head.py:292 -- Loading SubprocessModule: <class 'ray.dashboard.modules.metrics.metrics_head.MetricsHead'>.
+2025-09-29 13:50:03,489	INFO head.py:292 -- Loading SubprocessModule: <class 'ray.dashboard.modules.data.data_head.DataHead'>.
+2025-09-29 13:50:03,489	INFO head.py:292 -- Loading SubprocessModule: <class 'ray.dashboard.modules.event.event_head.EventHead'>.
+2025-09-29 13:50:03,489	INFO head.py:292 -- Loading SubprocessModule: <class 'ray.dashboard.modules.job.job_head.JobHead'>.
+2025-09-29 13:50:03,489	INFO head.py:292 -- Loading SubprocessModule: <class 'ray.dashboard.modules.node.node_head.NodeHead'>.
+2025-09-29 13:50:03,489	INFO head.py:292 -- Loading SubprocessModule: <class 'ray.dashboard.modules.reporter.reporter_head.ReportHead'>.
+2025-09-29 13:50:03,489	INFO head.py:292 -- Loading SubprocessModule: <class 'ray.dashboard.modules.serve.serve_head.ServeHead'>.
+2025-09-29 13:50:03,489	INFO head.py:292 -- Loading SubprocessModule: <class 'ray.dashboard.modules.state.state_head.StateHead'>.
+2025-09-29 13:50:03,489	INFO head.py:292 -- Loading SubprocessModule: <class 'ray.dashboard.modules.train.train_head.TrainHead'>.
+2025-09-29 13:50:03,489	INFO head.py:296 -- Loaded 9 subprocess modules: [<ray.dashboard.subprocesses.handle.SubprocessModuleHandle object at 0x2b6bca2ab380>, <ray.dashboard.subprocesses.handle.SubprocessModuleHandle object at 0x2b6bc6460200>, <ray.dashboard.subprocesses.handle.SubprocessModuleHandle object at 0x2b6bbe103770>, <ray.dashboard.subprocesses.handle.SubprocessModuleHandle object at 0x2b6bbc846750>, <ray.dashboard.subprocesses.handle.SubprocessModuleHandle object at 0x2b6bca4d7260>, <ray.dashboard.subprocesses.handle.SubprocessModuleHandle object at 0x2b6bca4bb770>, <ray.dashboard.subprocesses.handle.SubprocessModuleHandle object at 0x2b6bca550ef0>, <ray.dashboard.subprocesses.handle.SubprocessModuleHandle object at 0x2b6bcaf51130>, <ray.dashboard.subprocesses.handle.SubprocessModuleHandle object at 0x2b6bcaf53f50>].
+
+2025-09-29 13:50:13,571	ERROR services.py:1357 -- Failed to start the dashboard 
+2025-09-29 13:50:13,572	ERROR services.py:1382 -- Error should be written to 'dashboard.log' or 'dashboard.err'. We are printing the last 20 lines for you. See 'https://docs.ray.io/en/master/ray-observability/user-guides/configure-logging.html#logging-directory-structure' to find where the log file is.
+2025-09-29 13:50:13,572	ERROR services.py:1426 -- 
+The last 20 lines of /tmp/ray/session_2025-09-29_13-49-31_988536_83033/logs/dashboard.log (it contains the error message from the dashboard): 
+2025-09-29 13:50:03,413	INFO utils.py:338 -- Available modules: [<class 'ray.dashboard.modules.usage_stats.usage_stats_head.UsageStatsHead'>]
+2025-09-29 13:50:03,413	INFO head.py:235 -- DashboardHeadModules to load: None.
+2025-09-29 13:50:03,413	INFO head.py:238 -- Loading DashboardHeadModule: <class 'ray.dashboard.modules.usage_stats.usage_stats_head.UsageStatsHead'>.
+2025-09-29 13:50:03,413	INFO head.py:242 -- Loaded 1 dashboard head modules: [<ray.dashboard.modules.usage_stats.usage_stats_head.UsageStatsHead object at 0x2b6dadb7c500>].
+2025-09-29 13:50:03,414	INFO utils.py:305 -- Get all modules by type: SubprocessModule
+2025-09-29 13:50:03,488	INFO utils.py:338 -- Available modules: [<class 'ray.dashboard.modules.metrics.metrics_head.MetricsHead'>, <class 'ray.dashboard.modules.data.data_head.DataHead'>, <class 'ray.dashboard.modules.event.event_head.EventHead'>, <class 'ray.dashboard.modules.job.job_head.JobHead'>, <class 'ray.dashboard.modules.node.node_head.NodeHead'>, <class 'ray.dashboard.modules.reporter.reporter_head.ReportHead'>, <class 'ray.dashboard.modules.serve.serve_head.ServeHead'>, <class 'ray.dashboard.modules.state.state_head.StateHead'>, <class 'ray.dashboard.modules.train.train_head.TrainHead'>]
+2025-09-29 13:50:03,488	INFO head.py:292 -- Loading SubprocessModule: <class 'ray.dashboard.modules.metrics.metrics_head.MetricsHead'>.
+2025-09-29 13:50:03,489	INFO head.py:292 -- Loading SubprocessModule: <class 'ray.dashboard.modules.data.data_head.DataHead'>.
+2025-09-29 13:50:03,489	INFO head.py:292 -- Loading SubprocessModule: <class 'ray.dashboard.modules.event.event_head.EventHead'>.
+2025-09-29 13:50:03,489	INFO head.py:292 -- Loading SubprocessModule: <class 'ray.dashboard.modules.job.job_head.JobHead'>.
+2025-09-29 13:50:03,489	INFO head.py:292 -- Loading SubprocessModule: <class 'ray.dashboard.modules.node.node_head.NodeHead'>.
+2025-09-29 13:50:03,489	INFO head.py:292 -- Loading SubprocessModule: <class 'ray.dashboard.modules.reporter.reporter_head.ReportHead'>.
+2025-09-29 13:50:03,489	INFO head.py:292 -- Loading SubprocessModule: <class 'ray.dashboard.modules.serve.serve_head.ServeHead'>.
+2025-09-29 13:50:03,489	INFO head.py:292 -- Loading SubprocessModule: <class 'ray.dashboard.modules.state.state_head.StateHead'>.
+2025-09-29 13:50:03,489	INFO head.py:292 -- Loading SubprocessModule: <class 'ray.dashboard.modules.train.train_head.TrainHead'>.
+2025-09-29 13:50:03,489	INFO head.py:296 -- Loaded 9 subprocess modules: [<ray.dashboard.subprocesses.handle.SubprocessModuleHandle object at 0x2b6dad8832f0>, <ray.dashboard.subprocesses.handle.SubprocessModuleHandle object at 0x2b6db7d38500>, <ray.dashboard.subprocesses.handle.SubprocessModuleHandle object at 0x2b6db875fda0>, <ray.dashboard.subprocesses.handle.SubprocessModuleHandle object at 0x2b6db78540e0>, <ray.dashboard.subprocesses.handle.SubprocessModuleHandle object at 0x2b6db7856960>, <ray.dashboard.subprocesses.handle.SubprocessModuleHandle object at 0x2b6db6afd760>, <ray.dashboard.subprocesses.handle.SubprocessModuleHandle object at 0x2b6db6afd400>, <ray.dashboard.subprocesses.handle.SubprocessModuleHandle object at 0x2b6db6afd310>, <ray.dashboard.subprocesses.handle.SubprocessModuleHandle object at 0x2b6db6afd3d0>].
+
+2025-09-29 13:49:50,757	INFO usage_lib.py:473 -- Usage stats collection is enabled by default without user confirmation because this terminal is detected to be non-interactive. To disable this, add `--disable-usage-stats` to the command that starts the cluster, or run the following command: `ray disable-usage-stats` before starting the cluster. See https://docs.ray.io/en/master/cluster/usage-stats.html for more details.
+2025-09-29 13:49:50,757	INFO scripts.py:913 -- [37mLocal node IP[39m: [1m11.2.11.3[22m
+2025-09-29 13:50:15,951	SUCC scripts.py:949 -- [32m--------------------[39m
+2025-09-29 13:50:15,951	SUCC scripts.py:950 -- [32mRay runtime started.[39m
+2025-09-29 13:50:15,951	SUCC scripts.py:951 -- [32m--------------------[39m
+2025-09-29 13:50:15,951	INFO scripts.py:953 -- [36mNext steps[39m
+2025-09-29 13:50:15,951	INFO scripts.py:956 -- To add another node to this Ray cluster, run
+2025-09-29 13:50:15,951	INFO scripts.py:959 -- [1m  ray start --address='11.2.11.3:6379'[22m
+2025-09-29 13:50:15,951	INFO scripts.py:968 -- To connect to this Ray cluster:
+2025-09-29 13:50:15,951	INFO scripts.py:970 -- [35mimport[39m[26m ray
+2025-09-29 13:50:15,952	INFO scripts.py:971 -- ray[35m.[39m[26minit(_node_ip_address[35m=[39m[26m[33m'11.2.11.3'[39m[26m)
+2025-09-29 13:50:15,952	INFO scripts.py:1002 -- To terminate the Ray runtime, run
+2025-09-29 13:50:15,952	INFO scripts.py:1003 -- [1m  ray stop[22m
+2025-09-29 13:50:15,952	INFO scripts.py:1006 -- To view the status of the cluster, use
+2025-09-29 13:50:15,952	INFO scripts.py:1007 --   [1mray status[22m[26m
+2025-09-29 13:50:15,953	INFO scripts.py:1123 -- [36m[1m--block[22m[39m
+2025-09-29 13:50:15,953	INFO scripts.py:1124 -- This command will now block forever until terminated by a signal.
+2025-09-29 13:50:15,953	INFO scripts.py:1127 -- Running subprocesses are monitored and a message will be printed if any of them terminate unexpectedly. Subprocesses exit with SIGTERM will be treated as graceful, thus NOT reported.
+2025-09-29 13:50:15,960	INFO worker.py:1951 -- Started a local Ray instance.
+2025-09-29 13:50:52.252 | INFO     | __main__:<module>:40 - Doing Once: 
+2025-09-29 13:50:52.781 | INFO     | __main__:<module>:44 - Running 1000000 tests took 81.23 seconds
+2025-09-29 13:50:52.781 | INFO     | __main__:<module>:45 - --------------------------------
+2025-09-29 13:50:52.781 | INFO     | __main__:<module>:47 - Doing 5000 batches
+2025-09-29 13:54:40.022 | INFO     | __main__:<module>:54 - Running 5000000000 tests took 227.24 seconds.
+2025-09-29 13:54:40.038 | INFO     | __main__:<module>:58 - --------------------------------
+2025-09-29 13:54:40.038 | INFO     | __main__:<module>:63 - Doing Once: 
+2025-09-29 13:54:40.237 | INFO     | __main__:<module>:67 - Running 1000000 tests took 0.20 seconds
+2025-09-29 13:54:40.237 | INFO     | __main__:<module>:68 - --------------------------------

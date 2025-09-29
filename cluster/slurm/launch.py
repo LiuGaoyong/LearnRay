@@ -18,9 +18,8 @@ template_file = Path(__file__).parent.joinpath("./template.sh")
 def parse_args() -> argparse.Namespace:  # noqa: D103
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        "--exp-name",
+        "name",
         type=str,
-        required=True,
         help="The job name and path to logging file (exp_name.log).",
     )
     parser.add_argument(
@@ -72,23 +71,18 @@ def parse_args() -> argparse.Namespace:  # noqa: D103
 
 if __name__ == "__main__":
     args = parse_args()
-
-    job_name = "{}_{}".format(
-        args.exp_name,
-        time.strftime("%m%d-%H%M", time.localtime()),
-    )
-
-    # ===== Modified the template script =====
-    with open(template_file, "r") as f:
-        text = f.read()
+    job_name = f"{args.name}_{time.strftime('%m%d-%H%M', time.localtime())}"
+    text = template_file.read_text()
     text = text.replace(JOB_NAME, job_name)
     text = text.replace(NUM_NODES, str(args.num_nodes))
     text = text.replace(PARTITION_SUBMIT, args.partition)
-    if int(args.cpu_per_node) <= 0:
-        s = f"#SBATCH --cpus-per-task={NCPUS_PER_NODE}"
-        text = text.replace(s, "")
-    else:
+    if int(args.cpu_per_node) > 0:
+        if int(args.num_nodes) != 1:
+            raise KeyError("Only input num_nodes or ncpu !!!")
+        text = text.replace("#SBATCH --exclusive", "")
         text = text.replace(NCPUS_PER_NODE, str(args.cpu_per_node))
+    else:
+        text = text.replace(f"#SBATCH --cpus-per-task={NCPUS_PER_NODE}", "")
     text = text.replace(COMMAND_PLACEHOLDER, str(args.command))
     text = text.replace(PORT, str(args.port))
 

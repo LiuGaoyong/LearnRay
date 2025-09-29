@@ -1,15 +1,13 @@
 #!/bin/bash
 # shellcheck disable=SC2206
-#SBATCH --exclusive
-#SBATCH --ntasks-per-node=1
 
+#SBATCH --ntasks-per-node=1
 #SBATCH --nodes=1
-#SBATCH --job-name=test-ray_0929-1317
-#SBATCH --output=test-ray_0929-1317.log
+#SBATCH --job-name=test-ray_0929-1348
+#SBATCH --output=test-ray_0929-1348.log
 #SBATCH --partition=ihicnormal
 #SBATCH --cpus-per-task=4
 
-# !!!!  申请4个核心，但是却占用了所有的核心
 
 # Load modules or your own conda environment here
 eval "$(micromamba shell hook --shell bash)"
@@ -63,4 +61,4 @@ for ((i = 1; i <= worker_num; i++)); do
 done
 
 # ===== Call your code below =====
-python highly_parallel.py
+python highly_parallel.py 5000

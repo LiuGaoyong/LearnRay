@@ -2,11 +2,11 @@
 # shellcheck disable=SC2206
 
 #SBATCH --ntasks-per-node=1
-#SBATCH --nodes=$NUM_NODES
-#SBATCH --job-name=$JOB_NAME
-#SBATCH --output=$JOB_NAME.log
-#SBATCH --partition=$PARTITION_SUBMIT
-#SBATCH --cpus-per-task=$NCPUS_PER_NODE
+#SBATCH --nodes=1
+#SBATCH --job-name=test-ray_0929-1353
+#SBATCH --output=test-ray_0929-1353.log
+#SBATCH --partition=ihicnormal
+
 #SBATCH --exclusive
 
 # Load modules or your own conda environment here
@@ -38,7 +38,7 @@ if [[ "$ip" == *" "* ]]; then
   fi
   echo "IPV6 address detected. We split the IPV4 address as $ip"
 fi
-port=$PORT
+port=6379
 ip_head=$ip:$port
 export ip_head
 echo "IP Head: $ip_head"
@@ -61,4 +61,4 @@ for ((i = 1; i <= worker_num; i++)); do
 done
 
 # ===== Call your code below =====
-$COMMAND_PLACEHOLDER
+python highly_parallel.py 35000

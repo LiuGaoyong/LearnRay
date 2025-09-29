@@ -1,0 +1,57 @@
+IP Head: 11.2.21.3:6379
+STARTING HEAD at c0242
+2025-09-29 13:54:04.638 | INFO     | __main__:<module>:34 - Ray start by 1.9e-06s.
+2025-09-29 13:54:04.639 | INFO     | __main__:<module>:35 - --------------------------------
+2025-09-29 13:54:42,896	INFO worker.py:1942 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8265 [39m[22m
+2025-09-29 13:54:43,704	ERROR services.py:1357 -- Failed to start the dashboard , return code 1
+2025-09-29 13:54:43,704	ERROR services.py:1382 -- Error should be written to 'dashboard.log' or 'dashboard.err'. We are printing the last 20 lines for you. See 'https://docs.ray.io/en/master/ray-observability/user-guides/configure-logging.html#logging-directory-structure' to find where the log file is.
+2025-09-29 13:54:43,704	ERROR services.py:1426 -- 
+The last 20 lines of /tmp/ray/session_2025-09-29_13-54-25_784277_103409/logs/dashboard.log (it contains the error message from the dashboard): 
+2025-09-29 13:54:40,296	INFO http_server_head.py:104 -- Setup static dir for dashboard: /public/home/g505_liu/.local/share/mamba/lib/python3.12/site-packages/ray/dashboard/client/build
+2025-09-29 13:54:40,331	WARNING __init__.py:161 -- DeprecationWarning: `ray.ray_constants.DASHBOARD_CLIENT_MAX_SIZE` is a private attribute and access will be removed in a future Ray version.
+2025-09-29 13:54:40,438	WARNING http_server_head.py:280 -- Try to use port 8266: [Errno 98] error while attempting to bind on address ('127.0.0.1', 8265): [errno 98] address already in use
+2025-09-29 13:54:40,508	ERROR dashboard.py:308 -- The dashboard on node c0242 failed with the following error:
+Traceback (most recent call last):
+  File "/public/home/g505_liu/.local/share/mamba/lib/python3.12/site-packages/ray/dashboard/dashboard.py", line 297, in <module>
+    loop.run_until_complete(dashboard.run())
+  File "/public/home/g505_liu/.local/share/mamba/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/public/home/g505_liu/.local/share/mamba/lib/python3.12/site-packages/ray/dashboard/dashboard.py", line 98, in run
+    await self.dashboard_head.run()
+  File "/public/home/g505_liu/.local/share/mamba/lib/python3.12/site-packages/ray/dashboard/head.py", line 436, in run
+    await self._configure_http_server(
+  File "/public/home/g505_liu/.local/share/mamba/lib/python3.12/site-packages/ray/dashboard/head.py", line 149, in _configure_http_server
+    await self.http_server.run(dashboard_head_modules, subprocess_module_handles)
+  File "/public/home/g505_liu/.local/share/mamba/lib/python3.12/site-packages/ray/dashboard/http_server_head.py", line 282, in run
+    raise Exception(
+Exception: Failed to find a valid port for dashboard after 0 retries: [Errno 98] error while attempting to bind on address ('127.0.0.1', 8265): [errno 98] address already in use
+2025-09-29 13:54:25,782	INFO usage_lib.py:473 -- Usage stats collection is enabled by default without user confirmation because this terminal is detected to be non-interactive. To disable this, add `--disable-usage-stats` to the command that starts the cluster, or run the following command: `ray disable-usage-stats` before starting the cluster. See https://docs.ray.io/en/master/cluster/usage-stats.html for more details.
+2025-09-29 13:54:25,783	INFO scripts.py:913 -- [37mLocal node IP[39m: [1m11.2.21.3[22m
+2025-09-29 13:54:45,906	SUCC scripts.py:949 -- [32m--------------------[39m
+2025-09-29 13:54:45,906	SUCC scripts.py:950 -- [32mRay runtime started.[39m
+2025-09-29 13:54:45,906	SUCC scripts.py:951 -- [32m--------------------[39m
+2025-09-29 13:54:45,906	INFO scripts.py:953 -- [36mNext steps[39m
+2025-09-29 13:54:45,906	INFO scripts.py:956 -- To add another node to this Ray cluster, run
+2025-09-29 13:54:45,906	INFO scripts.py:959 -- [1m  ray start --address='11.2.21.3:6379'[22m
+2025-09-29 13:54:45,906	INFO scripts.py:968 -- To connect to this Ray cluster:
+2025-09-29 13:54:45,906	INFO scripts.py:970 -- [35mimport[39m[26m ray
+2025-09-29 13:54:45,906	INFO scripts.py:971 -- ray[35m.[39m[26minit(_node_ip_address[35m=[39m[26m[33m'11.2.21.3'[39m[26m)
+2025-09-29 13:54:45,906	INFO scripts.py:1002 -- To terminate the Ray runtime, run
+2025-09-29 13:54:45,906	INFO scripts.py:1003 -- [1m  ray stop[22m
+2025-09-29 13:54:45,906	INFO scripts.py:1006 -- To view the status of the cluster, use
+2025-09-29 13:54:45,906	INFO scripts.py:1007 --   [1mray status[22m[26m
+2025-09-29 13:54:45,907	INFO scripts.py:1123 -- [36m[1m--block[22m[39m
+2025-09-29 13:54:45,907	INFO scripts.py:1124 -- This command will now block forever until terminated by a signal.
+2025-09-29 13:54:45,907	INFO scripts.py:1127 -- Running subprocesses are monitored and a message will be printed if any of them terminate unexpectedly. Subprocesses exit with SIGTERM will be treated as graceful, thus NOT reported.
+2025-09-29 13:55:04.152 | INFO     | __main__:<module>:40 - Doing Once: 
+2025-09-29 13:55:04.644 | INFO     | __main__:<module>:44 - Running 1000000 tests took 60.01 seconds
+2025-09-29 13:55:04.644 | INFO     | __main__:<module>:45 - --------------------------------
+2025-09-29 13:55:04.644 | INFO     | __main__:<module>:47 - Doing 35000 batches
+2025-09-29 13:58:43.963 | INFO     | __main__:<module>:54 - Running 35000000000 tests took 219.32 seconds.
+2025-09-29 13:58:43.966 | INFO     | __main__:<module>:58 - --------------------------------
+2025-09-29 13:58:43.967 | INFO     | __main__:<module>:63 - Doing Once: 
+2025-09-29 13:58:44.155 | INFO     | __main__:<module>:67 - Running 1000000 tests took 0.19 seconds
+2025-09-29 13:58:44.155 | INFO     | __main__:<module>:68 - --------------------------------
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1759125525.231220  104246 chttp2_transport.cc:1182] ipv4:11.2.21.3:48588: Got goaway [2] err=UNAVAILABLE:GOAWAY received; Error code: 2; Debug Text: Cancelling all calls {grpc_status:14, http2_error:2, created_time:"2025-09-29T13:58:45.231128428+08:00"}
