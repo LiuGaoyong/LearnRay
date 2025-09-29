@@ -1,0 +1,7 @@
+name,filename
+core_04,test-ray-4c_0929-1426.log
+core_08,test-ray-8c_0929-1426.log
+core_16,test-ray-16c_0929-1427.log
+node_01,test-ray-16c_0929-1428.log
+node_02,test-ray-2n_0929-1429.log
+node_04,test-ray-4n_0929-1429.log
