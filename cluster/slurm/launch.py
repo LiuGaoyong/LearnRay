@@ -1,4 +1,4 @@
-#!usr/bin/env python3
+#!/usr/bin/env python3
 
 import argparse
 import subprocess
@@ -82,7 +82,7 @@ if __name__ == "__main__":
         text = text.replace("#SBATCH --exclusive", "")
         text = text.replace(NCPUS_PER_NODE, str(args.cpu_per_node))
     else:
-        text = text.replace(f"#SBATCH --cpus-per-task={NCPUS_PER_NODE}", "")
+        text = text.replace(NCPUS_PER_NODE, str(28))
     text = text.replace(COMMAND_PLACEHOLDER, str(args.command))
     text = text.replace(PORT, str(args.port))
 
