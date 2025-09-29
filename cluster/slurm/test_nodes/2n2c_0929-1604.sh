@@ -3,11 +3,10 @@
 
 #SBATCH --ntasks-per-node=1
 #SBATCH --nodes=2
-#SBATCH --job-name=test-ray-2n_0929-1515
-#SBATCH --output=test-ray-2n_0929-1515.log
+#SBATCH --job-name=2n2c_0929-1604
+#SBATCH --output=2n2c_0929-1604.log
 #SBATCH --partition=ihicnormal
-#SBATCH --cpus-per-task=28
-#SBATCH --exclusive
+#SBATCH --cpus-per-task=2
 
 # Load modules or your own conda environment here
 eval "$(micromamba shell hook --shell bash)"
@@ -61,4 +60,4 @@ for ((i = 1; i <= worker_num; i++)); do
 done
 
 # ===== Call your code below =====
-python highly_parallel.py 420000
+python highly_parallel.py 10000

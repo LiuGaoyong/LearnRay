@@ -34,7 +34,7 @@ def parse_args() -> argparse.Namespace:  # noqa: D103
         "--cpu-per-node",
         "-cpu",
         type=int,
-        default=0,
+        default=1,
         help="Number of cpu for each nodes to use.",
     )
 
@@ -76,13 +76,7 @@ if __name__ == "__main__":
     text = text.replace(JOB_NAME, job_name)
     text = text.replace(NUM_NODES, str(args.num_nodes))
     text = text.replace(PARTITION_SUBMIT, args.partition)
-    if int(args.cpu_per_node) > 0:
-        if int(args.num_nodes) != 1:
-            raise KeyError("Only input num_nodes or ncpu !!!")
-        text = text.replace("#SBATCH --exclusive", "")
-        text = text.replace(NCPUS_PER_NODE, str(args.cpu_per_node))
-    else:
-        text = text.replace(NCPUS_PER_NODE, str(28))
+    text = text.replace(NCPUS_PER_NODE, str(args.cpu_per_node))
     text = text.replace(COMMAND_PLACEHOLDER, str(args.command))
     text = text.replace(PORT, str(args.port))
 

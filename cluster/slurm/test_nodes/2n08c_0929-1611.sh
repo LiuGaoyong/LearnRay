@@ -2,12 +2,11 @@
 # shellcheck disable=SC2206
 
 #SBATCH --ntasks-per-node=1
-#SBATCH --nodes=1
-#SBATCH --job-name=test-ray-1n_0929-1515
-#SBATCH --output=test-ray-1n_0929-1515.log
+#SBATCH --nodes=2
+#SBATCH --job-name=2n08c_0929-1611
+#SBATCH --output=2n08c_0929-1611.log
 #SBATCH --partition=ihicnormal
-#SBATCH --cpus-per-task=28
-#SBATCH --exclusive
+#SBATCH --cpus-per-task=8
 
 # Load modules or your own conda environment here
 eval "$(micromamba shell hook --shell bash)"
@@ -61,4 +60,4 @@ for ((i = 1; i <= worker_num; i++)); do
 done
 
 # ===== Call your code below =====
-python highly_parallel.py 210000
+python highly_parallel.py  40000
