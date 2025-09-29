@@ -30,7 +30,7 @@ if __name__ == "__main__":
         BATCHES = int(sys.argv[1])
 
     t0 = time.time()
-    ray.init()
+    # ray.init()
     logger.info(f"Ray start by {time.time() - t0:.2}s.")
     logger.info("-" * 32)
 
@@ -55,4 +55,14 @@ if __name__ == "__main__":
         f"Running {FULL_SAMPLE_COUNT} tests took "
         f"{time.time() - start:.2f} seconds."
     )
+    logger.info("-" * 32)
+
+    start = time.time()
+    SAMPLE_COUNT = 1000 * 1000
+    future = pi4_sample.remote(SAMPLE_COUNT)
+    logger.info("Doing Once: ")
+    pi4 = ray.get(future)
+    end = time.time()
+    dur = end - start
+    logger.info(f"Running {SAMPLE_COUNT} tests took {dur:.2f} seconds")
     logger.info("-" * 32)
