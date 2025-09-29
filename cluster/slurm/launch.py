@@ -79,6 +79,8 @@ if __name__ == "__main__":
     text = text.replace(NCPUS_PER_NODE, str(args.cpu_per_node))
     text = text.replace(COMMAND_PLACEHOLDER, str(args.command))
     text = text.replace(PORT, str(args.port))
+    if int(args.cpu_per_node) < 28:
+        text = text.replace("#SBATCH --exclusive", "")
 
     # ===== Save the script =====
     script_file = "{}.sh".format(job_name)

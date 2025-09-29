@@ -7,6 +7,7 @@
 #SBATCH --output=$JOB_NAME.log
 #SBATCH --partition=$PARTITION_SUBMIT
 #SBATCH --cpus-per-task=$NCPUS_PER_NODE
+#SBATCH --exclusive
 
 # Load modules or your own conda environment here
 eval "$(micromamba shell hook --shell bash)"
