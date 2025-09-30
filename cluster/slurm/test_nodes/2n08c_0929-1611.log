@@ -1,0 +1,67 @@
+IP Head: 11.2.22.8:6379
+STARTING HEAD at c0257
+STARTING WORKER 1 at c0260
+2025-09-29 16:11:44.604 | INFO     | __main__:<module>:34 - Ray start by 2.1e-06s.
+2025-09-29 16:11:44.604 | INFO     | __main__:<module>:35 - --------------------------------
+2025-09-29 16:12:18,464	ERROR services.py:1357 -- Failed to start the dashboard 
+2025-09-29 16:12:18,464	ERROR services.py:1382 -- Error should be written to 'dashboard.log' or 'dashboard.err'. We are printing the last 20 lines for you. See 'https://docs.ray.io/en/master/ray-observability/user-guides/configure-logging.html#logging-directory-structure' to find where the log file is.
+2025-09-29 16:12:18,465	ERROR services.py:1426 -- 
+The last 20 lines of /tmp/ray/session_2025-09-29_16-11-55_794911_14451/logs/dashboard.log (it contains the error message from the dashboard): 
+2025-09-29 16:12:16,373	INFO http_server_head.py:104 -- Setup static dir for dashboard: /public/home/g505_liu/.local/share/mamba/lib/python3.12/site-packages/ray/dashboard/client/build
+2025-09-29 16:12:16,397	WARNING __init__.py:161 -- DeprecationWarning: `ray.ray_constants.DASHBOARD_CLIENT_MAX_SIZE` is a private attribute and access will be removed in a future Ray version.
+2025-09-29 16:12:16,495	WARNING http_server_head.py:280 -- Try to use port 8266: [Errno 98] error while attempting to bind on address ('127.0.0.1', 8265): [errno 98] address already in use
+2025-09-29 16:12:16,549	ERROR dashboard.py:308 -- The dashboard on node c0257 failed with the following error:
+Traceback (most recent call last):
+  File "/public/home/g505_liu/.local/share/mamba/lib/python3.12/site-packages/ray/dashboard/dashboard.py", line 297, in <module>
+    loop.run_until_complete(dashboard.run())
+  File "/public/home/g505_liu/.local/share/mamba/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/public/home/g505_liu/.local/share/mamba/lib/python3.12/site-packages/ray/dashboard/dashboard.py", line 98, in run
+    await self.dashboard_head.run()
+  File "/public/home/g505_liu/.local/share/mamba/lib/python3.12/site-packages/ray/dashboard/head.py", line 436, in run
+    await self._configure_http_server(
+  File "/public/home/g505_liu/.local/share/mamba/lib/python3.12/site-packages/ray/dashboard/head.py", line 149, in _configure_http_server
+    await self.http_server.run(dashboard_head_modules, subprocess_module_handles)
+  File "/public/home/g505_liu/.local/share/mamba/lib/python3.12/site-packages/ray/dashboard/http_server_head.py", line 282, in run
+    raise Exception(
+Exception: Failed to find a valid port for dashboard after 0 retries: [Errno 98] error while attempting to bind on address ('127.0.0.1', 8265): [errno 98] address already in use
+2025-09-29 16:12:18,915	INFO worker.py:1942 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8265 [39m[22m
+2025-09-29 16:11:55,790	INFO usage_lib.py:473 -- Usage stats collection is enabled by default without user confirmation because this terminal is detected to be non-interactive. To disable this, add `--disable-usage-stats` to the command that starts the cluster, or run the following command: `ray disable-usage-stats` before starting the cluster. See https://docs.ray.io/en/master/cluster/usage-stats.html for more details.
+2025-09-29 16:11:55,791	INFO scripts.py:913 -- [37mLocal node IP[39m: [1m11.2.22.8[22m
+2025-09-29 16:12:20,663	SUCC scripts.py:949 -- [32m--------------------[39m
+2025-09-29 16:12:20,663	SUCC scripts.py:950 -- [32mRay runtime started.[39m
+2025-09-29 16:12:20,663	SUCC scripts.py:951 -- [32m--------------------[39m
+2025-09-29 16:12:20,663	INFO scripts.py:953 -- [36mNext steps[39m
+2025-09-29 16:12:20,663	INFO scripts.py:956 -- To add another node to this Ray cluster, run
+2025-09-29 16:12:20,663	INFO scripts.py:959 -- [1m  ray start --address='11.2.22.8:6379'[22m
+2025-09-29 16:12:20,663	INFO scripts.py:968 -- To connect to this Ray cluster:
+2025-09-29 16:12:20,663	INFO scripts.py:970 -- [35mimport[39m[26m ray
+2025-09-29 16:12:20,663	INFO scripts.py:971 -- ray[35m.[39m[26minit(_node_ip_address[35m=[39m[26m[33m'11.2.22.8'[39m[26m)
+2025-09-29 16:12:20,663	INFO scripts.py:1002 -- To terminate the Ray runtime, run
+2025-09-29 16:12:20,664	INFO scripts.py:1003 -- [1m  ray stop[22m
+2025-09-29 16:12:20,664	INFO scripts.py:1006 -- To view the status of the cluster, use
+2025-09-29 16:12:20,664	INFO scripts.py:1007 --   [1mray status[22m[26m
+2025-09-29 16:12:20,664	INFO scripts.py:1123 -- [36m[1m--block[22m[39m
+2025-09-29 16:12:20,664	INFO scripts.py:1124 -- This command will now block forever until terminated by a signal.
+2025-09-29 16:12:20,664	INFO scripts.py:1127 -- Running subprocesses are monitored and a message will be printed if any of them terminate unexpectedly. Subprocesses exit with SIGTERM will be treated as graceful, thus NOT reported.
+2025-09-29 16:12:23,391	INFO scripts.py:1094 -- [37mLocal node IP[39m: [1m11.2.23.1[22m
+2025-09-29 16:12:28,113	SUCC scripts.py:1110 -- [32m--------------------[39m
+2025-09-29 16:12:28,115	SUCC scripts.py:1111 -- [32mRay runtime started.[39m
+2025-09-29 16:12:28,115	SUCC scripts.py:1112 -- [32m--------------------[39m
+2025-09-29 16:12:28,115	INFO scripts.py:1114 -- To terminate the Ray runtime, run
+2025-09-29 16:12:28,115	INFO scripts.py:1115 -- [1m  ray stop[22m
+2025-09-29 16:12:28,116	INFO scripts.py:1123 -- [36m[1m--block[22m[39m
+2025-09-29 16:12:28,116	INFO scripts.py:1124 -- This command will now block forever until terminated by a signal.
+2025-09-29 16:12:28,116	INFO scripts.py:1127 -- Running subprocesses are monitored and a message will be printed if any of them terminate unexpectedly. Subprocesses exit with SIGTERM will be treated as graceful, thus NOT reported.
+2025-09-29 16:12:44.565 | INFO     | __main__:<module>:40 - Doing Once: 
+2025-09-29 16:12:45.183 | INFO     | __main__:<module>:44 - Running 1000000 tests took 60.58 seconds
+2025-09-29 16:12:45.184 | INFO     | __main__:<module>:45 - --------------------------------
+2025-09-29 16:12:45.184 | INFO     | __main__:<module>:47 - Doing 40000 batches
+2025-09-29 16:26:38.786 | INFO     | __main__:<module>:54 - Running 40000000000 tests took 833.60 seconds.
+2025-09-29 16:26:39.041 | INFO     | __main__:<module>:58 - --------------------------------
+2025-09-29 16:26:39.042 | INFO     | __main__:<module>:63 - Doing Once: 
+2025-09-29 16:26:39.239 | INFO     | __main__:<module>:67 - Running 1000000 tests took 0.20 seconds
+2025-09-29 16:26:39.239 | INFO     | __main__:<module>:68 - --------------------------------
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1759134400.350339   14776 chttp2_transport.cc:1182] ipv4:11.2.22.8:62181: Got goaway [2] err=UNAVAILABLE:GOAWAY received; Error code: 2; Debug Text: Cancelling all calls {grpc_status:14, http2_error:2, created_time:"2025-09-29T16:26:40.350238041+08:00"}
