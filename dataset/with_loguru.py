@@ -18,14 +18,23 @@ class MyLogger:
             patchers=[],
             extra={},
         )
-        self.__logger.add("log.txt")
+        if logfile is not None:
+            self.__logger.add(logfile)
 
     def info(self, msg: str) -> None:
         self.__logger.info(msg)
 
 
 if __name__ == "__main__":
+    from pathlib import Path
+
+    f = Path(__file__)
+    name = f.name.split(".")[0]
+    log = f.with_name(f"{name}_log.txt")
+    logger = MyLogger.remote(log)
+
     ds = ray.data.range(100)
-    logger = MyLogger.remote()
-    ds2 = ds.map(lambda x: {"out": ray.get(logger.info.remote(f"{x}"))})
+    ds2 = ds.map(lambda x: {"out": ray.get(logger.info.remote(f"{x}"))})  # type: ignore
     print(ds2.take_all())
+
+    # 在Ray中使用loguru， 必须使用ray.remote把Logger类封装起来！！
