@@ -1,0 +1,33 @@
+IP Head: 11.2.17.1:6379
+STARTING HEAD at c0200
+2025-10-30 10:35:51,712	INFO usage_lib.py:473 -- Usage stats collection is enabled by default without user confirmation because this terminal is detected to be non-interactive. To disable this, add `--disable-usage-stats` to the command that starts the cluster, or run the following command: `ray disable-usage-stats` before starting the cluster. See https://docs.ray.io/en/master/cluster/usage-stats.html for more details.
+2025-10-30 10:35:51,714	INFO scripts.py:913 -- [37mLocal node IP[39m: [1m11.2.17.1[22m
+2025-10-30 10:36:06,914	SUCC scripts.py:949 -- [32m--------------------[39m
+2025-10-30 10:36:06,914	SUCC scripts.py:950 -- [32mRay runtime started.[39m
+2025-10-30 10:36:06,914	SUCC scripts.py:951 -- [32m--------------------[39m
+2025-10-30 10:36:06,914	INFO scripts.py:953 -- [36mNext steps[39m
+2025-10-30 10:36:06,915	INFO scripts.py:956 -- To add another node to this Ray cluster, run
+2025-10-30 10:36:06,915	INFO scripts.py:959 -- [1m  ray start --address='11.2.17.1:6379'[22m
+2025-10-30 10:36:06,915	INFO scripts.py:968 -- To connect to this Ray cluster:
+2025-10-30 10:36:06,915	INFO scripts.py:970 -- [35mimport[39m[26m ray
+2025-10-30 10:36:06,915	INFO scripts.py:971 -- ray[35m.[39m[26minit(_node_ip_address[35m=[39m[26m[33m'11.2.17.1'[39m[26m)
+2025-10-30 10:36:06,915	INFO scripts.py:983 -- To submit a Ray job using the Ray Jobs CLI:
+2025-10-30 10:36:06,915	INFO scripts.py:984 -- [1m  RAY_API_SERVER_ADDRESS='http://127.0.0.1:8265' ray job submit --working-dir . -- python my_script.py[22m
+2025-10-30 10:36:06,916	INFO scripts.py:993 -- See https://docs.ray.io/en/latest/cluster/running-applications/job-submission/index.html 
+2025-10-30 10:36:06,916	INFO scripts.py:997 -- for more information on submitting Ray jobs to the Ray cluster.
+2025-10-30 10:36:06,916	INFO scripts.py:1002 -- To terminate the Ray runtime, run
+2025-10-30 10:36:06,916	INFO scripts.py:1003 -- [1m  ray stop[22m
+2025-10-30 10:36:06,916	INFO scripts.py:1006 -- To view the status of the cluster, use
+2025-10-30 10:36:06,916	INFO scripts.py:1007 --   [1mray status[22m[26m
+2025-10-30 10:36:06,916	INFO scripts.py:1011 -- To monitor and debug Ray, view the dashboard at 
+2025-10-30 10:36:06,916	INFO scripts.py:1012 --   [1m127.0.0.1:8265[22m[26m
+2025-10-30 10:36:06,916	INFO scripts.py:1019 -- [4mIf connection to the dashboard fails, check your firewall settings and network configuration.[24m
+2025-10-30 10:36:06,917	INFO scripts.py:1123 -- [36m[1m--block[22m[39m
+2025-10-30 10:36:06,917	INFO scripts.py:1124 -- This command will now block forever until terminated by a signal.
+2025-10-30 10:36:06,917	INFO scripts.py:1127 -- Running subprocesses are monitored and a message will be printed if any of them terminate unexpectedly. Subprocesses exit with SIGTERM will be treated as graceful, thus NOT reported.
+2025-10-30 10:36:09,275	INFO worker.py:1942 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8266 [39m[22m
+======================================================
+{'CPU': 28.0, 'memory': 62355105792.0, 'object_store_memory': 26723616768.0, 'node:__internal_head__': 1.0, 'node:11.2.17.1': 1.0}
+{'CPU': 28.0, 'memory': 62355105792.0, 'node:__internal_head__': 1.0, 'object_store_memory': 26723616768.0, 'node:11.2.17.1': 1.0}
+{'d8cd071a6d64b0b99f518e9acdf8229ffb1b76486e858488a54995f1': {'CPU': 28.0, 'object_store_memory': 26723616768.0, 'memory': 62355105792.0, 'node:__internal_head__': 1.0, 'node:11.2.17.1': 1.0}}
+======================================================
